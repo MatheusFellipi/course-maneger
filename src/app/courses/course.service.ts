@@ -5,11 +5,13 @@ import { Course } from './course';
   providedIn: 'root',
 })
 export class CourseServices {
-
   retrieveAll(): Course[] {
     return COURSES;
   }
 
+  retrieveById(id: number): Course | undefined {
+    return COURSES.find((courseIterador: Course) => courseIterador.id === id);
+  }
 }
 
 var COURSES: Course[] = [
