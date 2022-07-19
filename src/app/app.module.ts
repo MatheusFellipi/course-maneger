@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { CourserInfoComponent } from './courses/course-info.component';
 import { CourserListComponent } from './courses/course-list.component';
 import { StarComponent } from './courses/star/star.component';
 import { Error404 } from './error404/Error-404.component';
@@ -18,6 +19,7 @@ import { ReplacePipe } from './piper/replace,pipe';
     ReplacePipe,
     NavBarComponent,
     Error404,
+    CourserInfoComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +33,10 @@ import { ReplacePipe } from './piper/replace,pipe';
       {
         path: 'course',
         component: CourserListComponent,
+      },
+      {
+        path: 'courses/info/:id',
+        component: CourserInfoComponent,
       },
       {
         path: '**',
