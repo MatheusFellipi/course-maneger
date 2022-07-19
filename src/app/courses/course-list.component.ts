@@ -13,7 +13,7 @@ export class CourserListComponent implements OnInit {
       {
         id: 1,
         name: 'Angular: forms',
-        Image:"",
+        Image:"/assets/images/forms.png",
         price: 99.99,
         code: 'XPS-7856',
         duration: 120,
@@ -22,11 +22,11 @@ export class CourserListComponent implements OnInit {
       },  {
         id: 2,
         name: 'Angular: HTTP',
-        Image:"",
+        Image:"/assets/images/http.png",
         price: 40.99,
         code: 'LKU-4531',
         duration: 80,
-        rating: 4,
+        rating: 3.5,
         release:"12/12/2020"
       },
       

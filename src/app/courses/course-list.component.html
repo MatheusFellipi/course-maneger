@@ -8,20 +8,20 @@
       <th>Price</th>
       <th>Code</th>
       <th>Rating</th>
-      <th>Duration</th>
       <th>Release date</th>
       <th>Option</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let course of coursers">
-      <td>{{ course.Image }}</td>
+      <td><img [src]="course.Image" width="40" height="40" alt="" /></td>
       <td>{{ course.name }}</td>
       <td>{{ course.price }}</td>
       <td>{{ course.code }}</td>
-      <td>{{ course.rating }}</td>
-      <td>{{ course.duration }}</td>
       <td>{{ course.release }}</td>
+      <td>
+        <app-star [rating]="course.rating"></app-star>
+      </td>
       <td></td>
     </tr>
   </tbody>
