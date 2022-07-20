@@ -37,6 +37,16 @@ export class CourserListComponent implements OnInit {
     );
   }
 
+  deleteById(id: number): void {
+    this.courseServices.deleteById(id).subscribe({
+      next: () => {
+        console.log('delete with success');
+        this.retrieveAll();
+      },
+      error: (err) => console.log(err),
+    });
+  }
+
   get filter() {
     return this._filterBy;
   }
