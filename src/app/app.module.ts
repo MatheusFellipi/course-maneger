@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { CourserInfoComponent } from './courses/course-info.component';
@@ -19,19 +20,21 @@ import { ReplacePipe } from './piper/replace,pipe';
     ReplacePipe,
     NavBarComponent,
     Error404,
-    CourserInfoComponent
+    CourserInfoComponent,
+    
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     RouterModule.forRoot([
       {
         path: '',
-        redirectTo: 'course',
+        redirectTo: 'courses',
         pathMatch: 'full',
       },
       {
-        path: 'course',
+        path: 'courses',
         component: CourserListComponent,
       },
       {
